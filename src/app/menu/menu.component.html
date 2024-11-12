@@ -1,0 +1,30 @@
+
+  <ul class="menu-bar">
+
+    @if (!myEmail) {
+      @if(this.menuService.menuSelection.value === 'LOGIN') {
+        <li class="menu-item active">LOGIN</li>
+      } @else {
+        <li class="menu-item" (click)="onLoginSelected()">LOGIN</li>
+      }
+    } @else {
+      @if(this.menuService.menuSelection.value === 'USER') {
+        <li class="menu-item active">USER</li>
+      } @else {
+        <li class="menu-item" (click)="onUserSelected()">USER</li>
+      }
+    }
+    @if(this.menuService.menuSelection.value === 'PIPBOY') {
+      <li class="menu-item active">PIPBOY</li>
+    } @else {
+      <li class="menu-item" (click)="onPipboySelected()">PIPBOY</li>
+    }
+
+    @if(this.menuService.menuSelection.value === 'NOTES') {
+      <li class="menu-item active">NOTES</li>
+    } @else {
+      <li class="menu-item" (click)="onNotesSelected()">NOTES</li>
+    }
+
+  </ul>
+

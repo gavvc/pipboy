@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/*Colour Definitions*/
+
+:root {
+    --backdropDark:  rgba(000,000,000, 1);
+    --backdropLight: rgba(002,047,018, 1); /* was  #1e4b2e */
+    --crtTextGreen:  rgba(000,255,000, 1);
+    --crtTextRed:    rgba(255,000,000, 1);
+}
+
+
+
+.crt {
+    /* scanlines */
+      background: linear-gradient(to top, var(--backdropDark), var(--backdropDark), var(--backdropLight), var(--backdropLight));
+      background-size: cover;
+      background-size: 100% 3px;
+
+    /* retro stuff */
+      color: var(--crtTextGreen);
+      font-family: "New Letter Gothic", monospace;
+      font-size: 50px;
+      text-align: center;
+      text-shadow: 0 0 10px var(--crtTextGreen);
+
+    /* flex stuff */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }

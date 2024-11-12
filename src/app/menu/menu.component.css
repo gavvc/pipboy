@@ -1,0 +1,37 @@
+.menu-bar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent; /* Initial state: no border */
+  border-bottom: 2px solid var(--crtTextGreen);
+}
+
+.menu-item:hover {
+  background-color: var(--crtTextGreen); /* Hover effect: light background */
+  color: var(--backdropDark);
+}
+
+.menu-item.active {
+  position: relative; /* Position the selected item */
+  border-top: 2px solid var(--crtTextGreen); /* Top border for the selected item */
+  border-left: 2px solid var(--crtTextGreen); /* Left border for the selected item */
+  border-right: 2px solid var(--crtTextGreen); /* Right border for the selected item */
+  border-bottom: none;
+  z-index: 1; /* Ensure the selected item is above other elements */
+}
+
+.menu-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust the bottom position as needed */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: 2px solid var(--backdropDark);
+}

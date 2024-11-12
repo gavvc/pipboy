@@ -1,0 +1,34 @@
+.register-form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.register-form input {
+  font-family: 'New Letter Gothic', monospace;
+  font-size: 1em;
+  color: var(--backdropDark);
+  background-color: var(--crtTextGreen);
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.register-form button {
+  font-size: 1em;
+  background-color: transparent;
+  border: 2px solid var(--crtTextGreen);
+  color: var(--crtTextGreen);
+  padding: 5px 10px;
+  cursor: crosshair;
+}
+
+.register-form button:hover {
+  background-color: var(--crtTextGreen);
+  color: var(--backdropDark);
+}
+
+.error {
+  color: var(--crtTextRed);
+  margin-bottom: 10px;
+}

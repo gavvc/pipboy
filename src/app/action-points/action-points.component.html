@@ -1,0 +1,11 @@
+@if (!myEmail) {
+  <h2>PLEASE AUTHENTICAT(E)</h2>
+  <img src="/vaultcat.gif">
+} @else {
+  <h2>ACTION POINTS</h2>
+  <img src="/vaultboy.gif">
+}
+
+@for (playerAP of playerAPs(); track playerAP.user.uid) {
+  <app-ap-player [playerAP]="playerAP"/>
+}

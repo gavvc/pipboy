@@ -1,0 +1,14 @@
+<h2>REGISTER NEW USER</h2>
+
+<div class="register-form">
+  @if (errorMessage) {
+    <div class="error">
+      <P>SYSTEM ERROR</P>
+      <p>{{errorMessage}}</p>
+    </div>
+  }
+  NAME<input type="string" id="username" name="username" [(ngModel)]="username">
+  EMAIL<input type="string" id="email" name="email" [(ngModel)]="email">
+  PASSWORD<input type="password" id="password" name="password" [(ngModel)]="password">
+  <P><button (click)="onSubmit()">REGISTER</button></P>
+</div>

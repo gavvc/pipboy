@@ -1,0 +1,13 @@
+.login-form button {
+  font-size: 1em;
+  background-color: transparent;
+  border: 2px solid var(--crtTextGreen);
+  color: var(--crtTextGreen);
+  padding: 5px 10px;
+  cursor: crosshair;
+}
+
+.login-form button:hover {
+  background-color: var(--crtTextGreen);
+  color: var(--backdropDark);
+}
